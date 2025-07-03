@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <title>Frontend Mentor | Conference Ticket Generator</title>
+
+  <style>
+    @font-face {
+  font-family: 'Inconsolata';
+  src: url('Inconsolata-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+
+    body {
+  background-image: url('pattern-squiggly-line-bottom-desktop.svg'), url('background-desktop.png'), url('pattern-circle.svg'), url('pattern-lines.svg');
+  background-size: 800px auto, cover, auto;
+  background-repeat: no-repeat;
+  background-position: bottom left, center;
+  font-family: 'Inconsolata', monospace;
+  margin: 0;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+    .logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+   
+    
+
+    p {
+      font-size: 14px;
+      margin-bottom: 30px;
+      color: #888;
+    }
+
+    .form-group {
+      max-width: 400px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .form-group h3 {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #888;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: border 0.3s ease, background-color 0.3s ease;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    .avatar-upload {
+      border: 2px dashed rgba(255, 255, 255, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .avatar-upload input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .avatar-upload img#avatarPreview {
+      max-height: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      z-index: 1;
+      display: none;
+    }
+
+    .upload-icon {
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .upload-icon img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 4px;
+    }
+
+    .upload-text {
+      font-size: 12px;
+      color: #ccc;
+      margin: 0;
+    }
+
+    button {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px;
+      font-size: 15px;
+      background-color: #FF6C5F;
+      color: rgb(14, 11, 11);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin: 0 auto;
+      display: block;
+    }
+
+    button:hover {
+      background-color: #e14d40;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 40px;
+      color: #ccc;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="logo-full.svg" alt="Conference Logo" class="logo">
+
+  <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+  <p>Secure your spot at next year’s biggest coding conference.</p>
+
+  <div class="form-group">
+    <h3>Upload Avatar</h3>
+    <div class="avatar-upload">
+      <input type="file" id="avatarInput" accept=".jpg, .jpeg, .png" />
+      <img id="avatarPreview" alt="Avatar Preview" />
+      <div class="upload-icon">
+        <img src="icon-upload.svg" alt="Upload Icon" />
+        <p class="upload-text">Drag and drop or Click to upload</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <h3>Full Name</h3>
+    <input type="text" id="fullname" placeholder="">
+  </div>
+
+  <div class="form-group">
+    <h3>Email Address</h3>
+    <input type="email" id="emailaddress" placeholder="example@gmail.com">
+  </div>
+
+  <div class="form-group">
+    <h3>GitHub Username</h3>
+    <input type="text" id="githubusername" placeholder="@yourusername">
+  </div>
+
+  <button>Generate My Ticket</button>
+
+  <div class="attribution">
+     <a href="https://www.frontendmentor.io">Rakin's Project. CAME SAW AND CONQUERED</a>.
+  </div>
+
+ 
+</body>
+</html>
+
